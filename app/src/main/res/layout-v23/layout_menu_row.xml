@@ -10,7 +10,7 @@
                 type="com.aochdjp.playwithgura_san.model.Menu.Menus" />
     </data>
 
-    <FrameLayout
+    <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:foreground="?android:selectableItemBackground"
@@ -20,12 +20,12 @@
                 android:id="@+id/title"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@{menu.titles"
+                android:text="@{menu.title}"
                 android:textAppearance="@style/TextAppearance.AppCompat"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:text="gurasan menu" />
 
-    </FrameLayout>
+    </android.support.constraint.ConstraintLayout>
 </layout>

@@ -9,12 +9,12 @@ data class Menu(
     val return_status: Short = 404,
     @SerializedName("menu_version")
     val menu_version: Float = 0.1f,
-    val menu: List<Contents>
+    val menu: List<Menus>
 ) {
-    data class Contents(
-        @SerializedName("urls")
-        val urls: MutableList<String>,
-        @SerializedName("titles")
-        val titles: MutableList<String>
+    data class Menus(
+        @SerializedName("url")
+        val url: String = "",
+        @SerializedName("title")
+        val titles: String = ""
     )
 }

@@ -36,9 +36,5 @@ class MenuRecyclerAdapter(private val context: Context): RecyclerView.Adapter<Me
         }
     }
 
-    fun setOnClickListener(callback: () -> Unit) {
-        this.clickListener = callback
-    }
-
     inner class ViewHolder(val binding: LayoutMenuRowBinding): RecyclerView.ViewHolder(binding.root)
 }

@@ -18,8 +18,6 @@
         <android.support.v4.widget.SwipeRefreshLayout
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:OnRefreshListener="@{() -> viewModel.getMenuList()}"
-                android:refreshing="@{viewModel.isLoading}"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"

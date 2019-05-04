@@ -12,7 +12,7 @@ class MenuViewModel : ViewModel(), LifecycleObserver {
 
     val menu = MutableLiveData<Menu>()
     // ロード中かどうか
-    val isLoading = ObservableField<Boolean>(false)
+    private val isLoading = ObservableField<Boolean>(false)
 
     private val disposeBug = CompositeDisposable()
 
