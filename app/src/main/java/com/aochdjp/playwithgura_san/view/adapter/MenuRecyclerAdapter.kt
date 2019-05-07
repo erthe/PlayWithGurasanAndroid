@@ -12,7 +12,7 @@ import com.aochdjp.playwithgura_san.model.Menu
 import com.aochdjp.playwithgura_san.model.util.DiffUtilCallback
 
 class MenuRecyclerAdapter(private val context: Context): RecyclerView.Adapter<MenuRecyclerAdapter.ViewHolder>() {
-    var menu: List<Menu.Contents>? = null
+    var menus: List<Menu.MenuList>? = null
         set(value) {
             DiffUtil.calculateDiff(DiffUtilCallback(field, value)).dispatchUpdatesTo(this)
             field = value
@@ -26,10 +26,10 @@ class MenuRecyclerAdapter(private val context: Context): RecyclerView.Adapter<Me
         return ViewHolder(binding)
     }
 
-    override fun getItemCount() = menu?.size ?: 0
+    override fun getItemCount() = menus?.size ?: 0
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val ev = menu?.getOrNull(position) ?: return
+        val ev = menus?.getOrNull(position) ?: return
         holder.binding.menu = ev
         holder.binding.root.setOnClickListener {
             clickListener?.invoke()

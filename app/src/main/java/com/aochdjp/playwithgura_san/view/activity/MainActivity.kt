@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity(), LifecycleOwner {
         menuViewModel = ViewModelProviders.of(this).get(MenuViewModel::class.java)
         lifecycle.addObserver(menuViewModel)
 
-        menuViewModel.menu.observe(this, Observer { menuListAdapter.menu = it?.menu })
+        menuViewModel.menus.observe(this, Observer { menuListAdapter.menus = it?.menus })
 
         binding.viewModel = menuViewModel
 

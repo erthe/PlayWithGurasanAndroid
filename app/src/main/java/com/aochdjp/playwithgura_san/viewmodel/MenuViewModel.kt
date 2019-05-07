@@ -9,11 +9,8 @@ import io.reactivex.rxkotlin.addTo
 import io.reactivex.rxkotlin.subscribeBy
 
 class MenuViewModel : ViewModel(), LifecycleObserver {
-
-    val menu = MutableLiveData<Menu>()
-    // ロード中かどうか
-    private val isLoading = ObservableField<Boolean>(false)
-
+    val menus = MutableLiveData<Menu>()
+    val isLoading = ObservableField<Boolean>(false)
     private val disposeBug = CompositeDisposable()
 
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
@@ -23,7 +20,7 @@ class MenuViewModel : ViewModel(), LifecycleObserver {
             .doFinally { isLoading.set(false) }
             .subscribeBy(
                 onNext = {
-                    menu.postValue(it)
+                    menus.postValue(it)
                 }
             ).addTo(disposeBug)
     }
