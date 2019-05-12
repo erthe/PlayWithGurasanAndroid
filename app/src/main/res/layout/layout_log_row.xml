@@ -6,8 +6,8 @@
     <data>
 
         <variable
-                name="menu"
-                type="com.aochdjp.playwithgura_san.model.Menu.MenuList" />
+                name="log"
+                type="com.aochdjp.playwithgura_san.model.Log.LogList" />
     </data>
 
     <android.support.constraint.ConstraintLayout
@@ -17,15 +17,16 @@
             android:padding="8dp" tools:targetApi="m">
 
         <TextView
-                android:id="@+id/menu_title"
+                android:id="@+id/log_list"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@{menu.title}"
+                android:textSize="12sp"
+                android:text="@{log.line}"
                 android:textAppearance="@style/TextAppearance.AppCompat"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                tools:text="gurasan menu" />
+                tools:text="UO_AOE logs" />
 
     </android.support.constraint.ConstraintLayout>
 </layout>

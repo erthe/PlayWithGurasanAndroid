@@ -1,6 +1,7 @@
 package com.aochdjp.playwithgura_san.model.repositories.abstracts
 
 import android.util.Log
+import com.aochdjp.playwithgura_san.model.repositories.LogApi
 import com.aochdjp.playwithgura_san.model.repositories.MenuApi
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -12,6 +13,8 @@ object ApiFactory {
 
     val menuApi: MenuApi
         get() = retrofit!!.create(MenuApi::class.java)
+    val logApi: LogApi
+        get() = retrofit!!.create(LogApi::class.java)
 
     private var retrofit: Retrofit? = null
         get() {

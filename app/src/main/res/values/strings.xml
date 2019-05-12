@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">ぐらさんと遊ぼう</string>
+    <string name="date_target">日付指定</string>
 </resources>

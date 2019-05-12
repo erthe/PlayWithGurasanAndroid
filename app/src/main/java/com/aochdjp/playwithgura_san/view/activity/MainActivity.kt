@@ -3,10 +3,12 @@ package com.aochdjp.playwithgura_san.view.activity
 import android.arch.lifecycle.LifecycleOwner
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
+import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.support.v7.widget.LinearLayoutManager
+import android.util.Log
 import com.aochdjp.playwithgura_san.R
 import com.aochdjp.playwithgura_san.databinding.ActivityMainBinding
 import com.aochdjp.playwithgura_san.view.adapter.MenuRecyclerAdapter
@@ -30,6 +32,9 @@ class MainActivity : AppCompatActivity(), LifecycleOwner {
         with(binding.menuList) {
             adapter = menuListAdapter
             layoutManager = LinearLayoutManager(this@MainActivity)
+            val parent = this@MainActivity
+            menuListAdapter.setOnClickListener { val intent = Intent(parent, LogActivity::class.java)
+                startActivity(intent) }
         }
     }
 }
