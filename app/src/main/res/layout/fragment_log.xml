@@ -17,18 +17,18 @@
             tools:context="com.aochdjp.playwithgura_san.view.activity.LogActivity">
 
         <Button
-                android:id="@+id/btnAdd1"
+                android:id="@+id/showDatePickerDialog"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/date_target"/>
 
         <LinearLayout android:layout_width="match_parent"
                       android:layout_height="wrap_content">
+
             <android.support.v4.widget.SwipeRefreshLayout
+                    android:id="@+id/swipe_refresh_log"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:OnRefreshListener="@{() -> viewModel.getLogList()}"
-                    android:refreshing="@{viewModel.isLoading}"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
