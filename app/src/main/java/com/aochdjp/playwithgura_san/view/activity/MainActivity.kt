@@ -35,9 +35,11 @@ class MainActivity : AppCompatActivity(), LifecycleOwner {
             adapter = menuListAdapter
             layoutManager = LinearLayoutManager(this@MainActivity)
             menuListAdapter.setOnClickListener {
-                val df = SimpleDateFormat(Key.YMD, Locale.JAPAN)
-                val date = Date()
-                startActivity(LogActivity.createIntent(this@MainActivity, df.format(date)))
+                if (it.url == getString(R.string.log)) {
+                    val df = SimpleDateFormat(Key.YMD, Locale.JAPAN)
+                    val date = Date()
+                    startActivity(LogActivity.createIntent(this@MainActivity, df.format(date)))
+                }
             }
         }
     }

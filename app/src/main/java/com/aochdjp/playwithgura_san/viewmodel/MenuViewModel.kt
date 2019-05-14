@@ -15,7 +15,7 @@ class MenuViewModel : ViewModel(), LifecycleObserver {
 
     @OnLifecycleEvent(Lifecycle.Event.ON_CREATE)
     fun getMenuList() {
-        menuApi.menu()
+        menuApi.menu("0.1")
             .doOnSubscribe { isLoading.set(true) }
             .doFinally { isLoading.set(false) }
             .subscribeBy(

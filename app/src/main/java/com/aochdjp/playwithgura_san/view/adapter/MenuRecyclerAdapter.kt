@@ -4,7 +4,6 @@ import android.content.Context
 import android.databinding.DataBindingUtil
 import android.support.v7.util.DiffUtil
 import android.support.v7.widget.RecyclerView
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.aochdjp.playwithgura_san.R
@@ -19,7 +18,7 @@ class MenuRecyclerAdapter(private val context: Context): RecyclerView.Adapter<Me
             field = value
         }
 
-    private var clickListener: (() -> Unit)? = null
+    private var clickListener: ((Menu.MenuList) -> Unit)? = null
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val binding = DataBindingUtil.inflate<LayoutMenuRowBinding>(LayoutInflater.from(context), R.layout.layout_menu_row, parent, false)
@@ -33,12 +32,11 @@ class MenuRecyclerAdapter(private val context: Context): RecyclerView.Adapter<Me
         val ev = menus?.getOrNull(position) ?: return
         holder.binding.menu = ev
         holder.binding.root.setOnClickListener {
-            Log.d("MenuRecyclerAdapter", "clicked")
-            clickListener?.invoke()
+            clickListener?.invoke(ev)
         }
     }
 
-    fun setOnClickListener(callback: () -> Unit) {
+    fun setOnClickListener(callback: (Menu.MenuList) -> Unit) {
         this.clickListener = callback
     }
 

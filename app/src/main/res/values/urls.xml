@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="menu">/api/menu/</string>
+    <string name="log">/api/uo_aoe_log/</string>
+    <string name="ramen"> /api/ramen/</string>
+    <string name="stream">/api/stream/</string>
+</resources>
