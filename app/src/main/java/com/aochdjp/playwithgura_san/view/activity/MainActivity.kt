@@ -1,5 +1,6 @@
 package com.aochdjp.playwithgura_san.view.activity
 
+import android.arch.lifecycle.Lifecycle
 import android.arch.lifecycle.LifecycleOwner
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
@@ -25,6 +26,7 @@ class MainActivity : AppCompatActivity(), LifecycleOwner {
         val binding = DataBindingUtil.setContentView<ActivityMainBinding>(this, R.layout.activity_main)
 
         menuViewModel = ViewModelProviders.of(this).get(MenuViewModel::class.java)
+
         lifecycle.addObserver(menuViewModel)
 
         menuViewModel.menus.observe(this, Observer { menuListAdapter.menus = it?.menus })
