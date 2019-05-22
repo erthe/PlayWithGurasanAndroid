@@ -6,11 +6,6 @@ import android.os.Bundle
 import com.aochdjp.playwithgura_san.view.activity.LogActivity
 import com.aochdjp.playwithgura_san.view.fragment.LogFragment
 
-object Key {
-    const val LOG = "log"
-    const val YMD = "yyyy/MM/dd"
-}
-
 // Instance Builder
 fun LogActivity.Companion.createIntent(context: Context, targetDate: String): Intent =
     Intent(context, LogActivity::class.java).apply {

@@ -23,6 +23,8 @@
         </activity>
         <activity android:name=".view.activity.LogActivity">
         </activity>
+        <activity android:name=".view.activity.RamenActivity">
+        </activity>
     </application>
 
 </manifest>

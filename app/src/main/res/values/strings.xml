@@ -3,4 +3,5 @@
     <string name="date_target">日付指定</string>
     <string name="common_clear"> クリア</string>
     <string name="common_no_data">指定なし</string>
+    <string name="today_ramen">今日のラーメン</string>
 </resources>

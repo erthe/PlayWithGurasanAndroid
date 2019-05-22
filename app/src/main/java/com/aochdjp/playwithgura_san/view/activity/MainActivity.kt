@@ -4,6 +4,7 @@ import android.arch.lifecycle.Lifecycle
 import android.arch.lifecycle.LifecycleOwner
 import android.arch.lifecycle.Observer
 import android.arch.lifecycle.ViewModelProviders
+import android.content.Intent
 import android.databinding.DataBindingUtil
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -41,6 +42,9 @@ class MainActivity : AppCompatActivity(), LifecycleOwner {
                     val df = SimpleDateFormat(Key.YMD, Locale.JAPAN)
                     val date = Date()
                     startActivity(LogActivity.createIntent(this@MainActivity, df.format(date)))
+                } else if(it.url == getString(R.string.ramen)) {
+                    val intent = Intent(this@MainActivity, RamenActivity::class.java)
+                    startActivity(intent)
                 }
             }
         }

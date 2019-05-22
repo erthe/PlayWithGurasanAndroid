@@ -54,7 +54,7 @@ class LogFragment : Fragment() {
 
         view.findViewById<Button>(R.id.showDatePickerDialog).setOnClickListener {
             DatePick.openDatePicker(parentDate, mContext)
-            val fragmentManager: FragmentManager? = getFragmentManager()
+            val fragmentManager: FragmentManager? = this.fragmentManager
             DatePick.listener = object : DatePick.Companion.Listener {
                 override fun onDismiss(date: String) {
                     if (parentContext is Context) {
