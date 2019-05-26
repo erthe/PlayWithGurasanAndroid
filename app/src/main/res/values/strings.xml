@@ -4,4 +4,9 @@
     <string name="common_clear"> クリア</string>
     <string name="common_no_data">指定なし</string>
     <string name="today_ramen">今日のラーメン</string>
+    <string name="no_name">名無し</string>
+    <string name="sir">さん</string>
+    <string name="no_stream">配信情報はありません</string>
+    <string name="viewer">視聴者数: </string>
+    <string name="unit">人</string>
 </resources>

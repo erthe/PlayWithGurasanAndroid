@@ -42,8 +42,11 @@ class MainActivity : AppCompatActivity(), LifecycleOwner {
                     val df = SimpleDateFormat(Key.YMD, Locale.JAPAN)
                     val date = Date()
                     startActivity(LogActivity.createIntent(this@MainActivity, df.format(date)))
-                } else if(it.url == getString(R.string.ramen)) {
+                } else if (it.url == getString(R.string.ramen)) {
                     val intent = Intent(this@MainActivity, RamenActivity::class.java)
+                    startActivity(intent)
+                } else if (it.url == getString(R.string.stream)) {
+                    val intent = Intent(this@MainActivity, StreamActivity::class.java)
                     startActivity(intent)
                 }
             }
